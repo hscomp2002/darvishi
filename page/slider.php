@@ -1,6 +1,6 @@
 <?php
     include_once("include/pdate.php");
-    $mm_citys = array('MHD','KIH','GSM','TBZ','IFN');
+    $mm_citys = array('MHD','KIH','GSM','TBZ','IFN','SYZ','AWZ');
     $q_s=" source_yata='THR'";
     $q_d=" and des_yata in ('".implode("','",$mm_citys)."')";
 
@@ -114,7 +114,7 @@
     var i = 1;
     for(des in mm_data)
     {
-        if($("#div_"+i).length>0)
+        if($("#div_"+i).length>0 && parseInt(mm_data[des].price1,10)>0)
         {
             $("#div_"+i).find(".city-name").html(mm_data[des].source_city+' به '+mm_data[des].des_city);
             $("#div_"+i).find(".date").html(mm_data[des].date);
