@@ -1,0 +1,4 @@
+user : darvishi
+pass : darvishistand
+
+bak: domain.com/gohar/bank.php

@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^gohar724.ir
+RewriteCond %{HTTPS} =on
+RewriteRule .* https://www.%{SERVER_NAME}%{REQUEST_URI} [R,L]
+RewriteCond %{HTTP_HOST} ^gohar724.ir
+RewriteCond %{HTTPS} !=on
+RewriteRule .* http://www.%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+ErrorDocument 404 /includes/pages/404.php
+
+RewriteRule . /index.php [L]
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://gohar724.ir/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://gohar724.ir$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.gohar724.ir/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.gohar724.ir$      [NC]
+#RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]

@@ -1,0 +1,39 @@
+body{
+    font-family: 'bmi',tahoma;
+}
+.gc-padding{
+    padding: 10px;
+}
+.gc-margin{
+    margin: 5px;
+}
+.modal-body{
+    font-family: 'bmi';
+}
+.gc-border{
+    border: solid 1px #000 !important;
+    border-radius: 5px;
+}
+.gc-border-red{
+    border: solid 1px #F00 !important;
+    border-radius: 5px;
+}
+.gc-gray{
+    background-color: #282828;
+    color: #FFF;
+    font-family: 'bmi';
+}
+.gc-table {
+    font-size: 80%;
+}
+.gc-table th,td{
+    text-align: center;
+    border:none !important;
+}
+.gc-80{
+    font-size: 80%;
+}
+.gc-div{
+    color:#000;
+}
+
